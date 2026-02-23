@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Register</title>
+  <!-- <style>
+  body{
+    display:flex;
+    background-image:url("pic/background1.png");
+    justify-content: center;
+    align-items: center;
+    background-repeat: repeat;
+    object-fit:fill;
+    background-size: 100vh;
+    font-size:15px;
+  }
+  .block{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color:white;
+    
+    padding:10px;
+    height:25em;
+    width:15em;
+    border-radius:10px 30px;
+    border: ridge 10px rgba(255, 255, 0, 0.46);
+    font-size:15px
+  }
+  input,select{
+    width:200px;
+    padding:3px 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    justify-self:right;
+    border-radius:20px;
+    border:1px rgba(0, 0, 0, 0.163) solid; 
+  }::placeholder{
+    color:rgba(255, 0, 0, 0.367);
+    opacity: 0.5;
+  }
+  </style> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><form action="succ.html" >
+    
+    <div class="block" style="height:28em"><div>
+        <img src="pic\logo.png" style="width:10em;height:auto;align-self: center;">
+    </div>
+      <div class="name">
+        <label style="margin-bottom:0">User Name/Email:<sup style="color:red;font-size:10px;">*</sup></label>
+        <br><input type="text" placeholder="Enter your User Name/Email" id="name">
+      </div>
+      <div class="password" >
+        <label class="password">Password:</label>
+        <br><input type="password" class="password" placeholder="Enter your password">
+      </div>
+      <div class="password" >
+        <label class="password">Password:</label>
+        <br><input type="password" class="password" placeholder="Enter your password">
+      </div>
+      <div class="select">
+        <label class="select">Identity:</label>
+        <br>
+        <select class="select" name="--Select--" >
+            <option selected disabled class="select">--Select--</option>
+          <option class="select">Admin</option>
+          <option class="select">Librarian</option>
+          <option class="select">Faculty</option>
+          <option class="select">Student</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" style="color:white;background-color:green;" >
+      </div>
+      <div style="display:flex;align-items: center;flex-direction: column;">
+        <span ><a href="forgot.html" style="text-decoration: none; font-size:small">Forgot Password?</a></span>
+      </div>
+    </div></form>
+  </h1>
+</body>
+</html>
