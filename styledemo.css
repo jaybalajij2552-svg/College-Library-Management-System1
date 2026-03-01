@@ -1,23 +1,4 @@
-
-  .back {
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* Prevents scrollbars */
-  }
-
-  /* This creates a blurred background that stays fixed */
-  .back::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -241,51 +222,3 @@ body {
 .contact li {
   font-size: 16px;
 }
-    width: 100%;
-    height: 100%;
-    /* Update path to your "attractive" background */
-    background: url("pic/background2.jpg") no-repeat center center;
-    background-size: cover; 
-    filter: blur(5px); /* Your requested background blur */
-    transform: scale(1.1); /* Prevents white edges from the blur */
-    z-index: -1;
-  }
-
-  .block {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 20px;
-    height: auto;
-    width: 320px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    border: 20px ridge rgba(196, 248, 7, 0.5); /* Modern border */
-  }
-
-  /* Input styling remains largely the same but refined */
-  input, select {
-    width: 250px;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-weight: bold;
-    
-  }
-input:hover,select:hover{
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.411);
-}
-input:active,select:active{
-  box-shadow: 0px 0px 5px rgb(0, 0, 0);
-}
-  input[type="submit"] {
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-
-  input[type="submit"]:hover {
-    transform: scale(1.05);
-  }
