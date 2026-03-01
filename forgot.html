@@ -1,64 +1,48 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>forgot</title>
-  <!-- <style>
-  body{
-    
-    background-image:url("pic/background1.png");
-    justify-items:center;
-    
-    align-items:center;
-    font-size:15px;
-  }
-  .block{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content:space-around;
-    background-color:white;
-    margin-top:100px;
-    padding:10px;
-    height:25em;
-    width:15em;
-    border-radius:10px 30px;
-    border: ridge 10px rgba(255, 255, 0, 0.46);
-    font-size:15px
-  }
-  input,select{
-    width:200px;
-    padding:3px 5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:bold;
-    justify-self:right;
-    border-radius:20px;
-    border:1px rgba(0, 0, 0, 0.163) solid; 
-  }::placeholder{
-    color:rgba(255, 0, 0, 0.367);
-    opacity: 0.5;
-  }
-  </style> -->
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styleLogin.css">
+   <link rel="stylesheet" href="styledemo.css">
 </head>
 <body>
-  <h1><form action="Otp.html" >
-    
-    <div class="block" style="height:20em"><div>
-        <img src="pic\logo.png" style="width:10em;height:auto;align-self: center;">
+  <!-- same navbar as on index.html -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="pic/Vemu_logo1.png" alt="Vemu IT" height="80">
     </div>
-      <div class="name">
-        <label style="margin-bottom:0">User Name/Email:<sup style="color:red;font-size:10px;">*</sup></label>
-        <br><input type="text" placeholder="Enter your User Name/Email" id="name" required>
+
+    <div class="navbar-center">
+      <img src="pic/Vemu_logo2.png" alt="Naac_Certification" height="80">
+      <img src="pic/Vemu_logo3.png" alt="Blood Donator" height="80">
+      <img src="pic/Vemu_logo4.png" alt="Ai_Enhancement" height="80">
+      <img src="pic/Vemu_logo5.png" alt="Eamcet_Mock_Test" height="80">
+    </div>
+
+    <div class="navbar-right">
+      <a href="log.html">Faculty login/Student login</a>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <form action="Otp.html" class="login-form">
+      <div class="block">
+        <img src="pic/logo.png" alt="logo" class="login-logo">
+
+        <label>
+          User Name/Email:<sup style="color:red;font-size:10px;">*</sup><br>
+          <input type="text" name="user" placeholder="Enter your User Name/Email" required>
+        </label>
+
+        
+        
+
+        <input type="submit" value="Login">
+
+        <a href="forgot.html" class="forgot-link">Forgot Password?</a>
       </div>
-      <div>
-        <input type="submit" Value="Send Otp" style="color:white;background-color:green; " >
-      </div>
-      <div style="display:flex;align-items: center;flex-direction: column;">        <label>Remember Your password? <a href="index.html" style="text-decoration: none;font-size:small">Sign in</a></label>
-      </div>
-    </div></form>
-  </h1>
+    </form>
+  </main>
 </body>
 </html>
