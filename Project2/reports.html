@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Library Admin Dashboard</title>
+<link rel="stylesheet" href="styledemo.css">
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#f0f2f5;
+}
+
+/* Navbar */
+
+.navbar{
+background:linear-gradient(90deg,#1a237e,#3949ab);
+color:white;
+padding:20px;
+text-align:center;
+font-size:22px;
+display:flex;
+justify-content: center;
+align-items:center;
+font-weight:bold;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Layout */
+
+.admin-container{
+display:flex;
+height:100vh;
+padding-top: 46px;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:260px;
+background:linear-gradient(180deg,#1a237e,#283593);
+color:white;
+padding:25px;
+box-shadow:3px 0 8px rgba(0,0,0,0.2);
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+.sidebar a{
+display:block;
+text-decoration:none;
+background:rgba(255,255,255,0.15);
+color:white;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.sidebar a:hover{
+background:white;
+color:#1a237e;
+transform:translateX(6px);
+}
+
+/* Main */
+
+.main{
+flex:1;
+padding:40px;
+}
+
+/* Welcome Card */
+
+.welcome-card{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+margin-bottom:30px;
+text-align:center;
+}
+
+.welcome-card h2{
+color:#1a237e;
+}
+
+/* Dashboard cards */
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+text-align:center;
+transition:0.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-6px);
+}
+
+.stat-card h3{
+color:#3949ab;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:28px;
+font-weight:bold;
+}.navbar-left{
+    display:inline;
+    margin-right: 60px;
+    width: 400px;
+img{
+    margin-top: 0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="navbar-left">
+  <img src="graphs/vemu_logo.png" alt="Vemu IT LMS" height="90" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+</div>
+📚 Library Management Admin Panel
+</header>
+
+<div class="admin-container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Admin Menu</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="create-user.html">👤 Create User</a>
+<a href="update-user.html">✏ Update User</a>
+<a href="delete-user.html">❌ Delete User</a>
+<a href="assign-role.html">🔑 Assign Roles</a>
+<a href="records.html">📋 View Records</a>
+<a href="reports.html">📊 Generate Reports</a>
+<a href="backup.html">💾 Backup / Restore</a>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<div class="card">
+<h2>Generate Reports</h2>
+
+<h3>Users Report</h3>
+<img src="graphs/users.png" width="600">
+
+<h3>Books Report</h3>
+<img src="graphs/books.png" width="600">
+
+<h3>Transactions Report</h3>
+<img src="graphs/transactions.png" width="600">
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>

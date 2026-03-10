@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Library Admin Dashboard</title>
+<link rel="stylesheet" href="styledemo.css">
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI;
+}
+
+/* Layout */
+
+.admin-container{
+display:flex;
+height:100vh;
+margin-top:90px;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:250px;
+background:#2525c9;
+color:white;
+padding:20px;
+}
+
+.sidebar h2{
+margin-bottom:20px;
+}
+
+.sidebar button{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+background:#a3a3c1;
+color:white;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+}
+
+.sidebar button:hover{
+background:#7a7ac0;
+}
+
+/* Main */
+
+.main{
+flex:1;
+padding:30px;
+background:#f5f5f5;
+}
+
+/* Cards */
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 5px gray;
+margin-bottom:20px;
+}
+
+/* Inputs */
+
+input,select{
+width:100%;
+padding:8px;
+margin:6px 0 15px;
+}
+
+/* Buttons */
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+background:#2525c9;
+color:white;
+}
+
+/* REPORT OPTIONS */
+
+.report-options{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.report-options input{
+display:none;
+}
+
+.report-options label{
+background:#ff9800;
+color:white;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.report-options label:hover{
+background:#e68900;
+}
+
+/* Graph area */
+
+.graph-container{
+margin-top:25px;
+text-align:center;
+}
+
+.graph{
+display:none;
+max-width:600px;
+border-radius:10px;
+box-shadow:0 0 5px gray;
+}
+
+/* Show graph when selected */
+
+#users:checked ~ .graph-container .users-graph{
+display:block;
+}
+
+#books:checked ~ .graph-container .books-graph{
+display:block;
+}
+
+#transactions:checked ~ .graph-container .trans-graph{
+display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<h2>Library Admin Dashboard</h2>
+</header>
+
+<div class="admin-container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Admin Menu</h2>
+
+<button onclick="showSection('createUser')">Create User</button>
+<button onclick="showSection('updateUser')">Update User</button>
+<button onclick="showSection('deleteUser')">Delete User</button>
+<button onclick="showSection('assignRole')">Assign Roles</button>
+<button onclick="showSection('records')">View Records</button>
+<button onclick="showSection('reports')">Generate Reports</button>
+<button onclick="showSection('backup')">Backup / Restore</button>
+
+</div>
+
+
+<!-- Main Content -->
+
+<div class="main">
+
+<!-- Create User -->
+
+<div id="createUser" class="card">
+
+<h2>Create User</h2>
+
+<label>Username</label>
+<input type="text" placeholder="Enter username">
+
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+
+<label>User Role</label>
+<select>
+<option>Student</option>
+<option>Faculty</option>
+<option>Admin</option>
+</select>
+
+<button onclick="alert('User Created')">Create User</button>
+
+</div>
+
+
+<!-- Update User -->
+
+<div id="updateUser" class="card" style="display:none">
+
+<h2>Update User</h2>
+
+<label>User ID</label>
+<input type="text" placeholder="Enter user ID">
+
+<label>New Username</label>
+<input type="text" placeholder="Enter new username">
+
+<button onclick="alert('User Updated')">Update User</button>
+
+</div>
+
+
+<!-- Delete User -->
+
+<div id="deleteUser" class="card" style="display:none">
+
+<h2>Delete User</h2>
+
+<label>User ID</label>
+<input type="text" placeholder="Enter user ID">
+
+<button onclick="alert('User Deleted')">Delete User</button>
+
+</div>
+
+
+<!-- Assign Role -->
+
+<div id="assignRole" class="card" style="display:none">
+
+<h2>Assign Role</h2>
+
+<label>User ID</label>
+<input type="text" placeholder="Enter user ID">
+
+<label>Select Role</label>
+<select>
+<option>Student</option>
+<option>Faculty</option>
+<option>Librarian</option>
+<option>Admin</option>
+</select>
+
+<button onclick="alert('Role Assigned')">Assign Role</button>
+
+</div>
+
+
+<!-- Records -->
+
+<div id="records" class="card" style="display:none">
+
+<h2>Library Records</h2>
+
+<ul>
+<li>Total Books : 12,500</li>
+<li>Total Users : 3,200</li>
+<li>Books Issued : 850</li>
+<li>Transactions Today : 42</li>
+</ul>
+
+</div>
+
+
+<!-- Reports -->
+
+<div id="reports" class="card" style="display:none">
+
+<h2>Generate Reports</h2>
+
+<div class="report-options">
+
+<input type="radio" name="report" id="users">
+<label for="users">Users Report</label>
+
+<input type="radio" name="report" id="books">
+<label for="books">Books Report</label>
+
+<input type="radio" name="report" id="transactions">
+<label for="transactions">Transactions Report</label>
+
+</div>
+
+
+<div class="graph-container">
+
+<img src="graphs/users.png" class="graph users-graph">
+<img src="graphs/books.png" class="graph books-graph">
+<img src="graphs/transactions.png" class="graph trans-graph">
+
+</div>
+
+</div>
+
+
+<!-- Backup -->
+
+<div id="backup" class="card" style="display:none">
+
+<h2>Database Backup</h2>
+
+<button onclick="alert('Database Backup Completed')">Backup</button>
+
+<button onclick="alert('Database Restored')">Restore</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* Switch between sections */
+
+function showSection(sectionId){
+
+const sections = document.querySelectorAll(".card");
+
+sections.forEach(section=>{
+section.style.display="none";
+});
+
+document.getElementById(sectionId).style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>

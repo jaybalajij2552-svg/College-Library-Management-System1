@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:grid;
+            background-color: #0f0d0d40;
+            grid-template:repeat(4,1fr) /repeat(4,1fr) ;
+        }
+        #Board{
+            background-color: rgb(8, 8, 8);
+            color:white;
+            padding:2em;
+            text-align: center;
+            font-size: 2rem;
+        }#navbar {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-row:1;
+  grid-column:1/5;
+  background-color: rgb(37, 37, 201);
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  z-index: 1000;
+  flex-wrap:wrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+        #Board2{
+            line-height:40px;
+            background-color: rgb(2, 2, 110);
+            grid-row:2/5;
+            display:flex;
+            color:rgb(250, 249, 249);
+            flex-direction: column;
+            justify-content: left;
+            font-size: 20px;
+            padding:20px 2px 10px 2px;
+            position:sticky;
+
+        }
+        #Board3{
+            margin:5px 2.5px 2.5px 5px;
+            border-radius:10px;
+            background-color: rgba(3, 3, 144, 0.227);
+            grid-row:2;
+            grid-column:2/4;
+            font-size: xx-large;
+            color:red;
+            text-align:center;
+            align-content:center;
+            padding:2em;
+            text-align: center;
+            font-size: 2rem;
+        }
+        #Board4{border-radius:10px;
+            margin:5px 2.5px 2.5px 2.5px;
+            background-color: rgba(0, 255, 76, 0.467);
+            grid-row:2/4;
+            grid-column:4;
+
+            font-size: xx-large;
+            color:red;
+            text-align:center;
+            align-content:center;
+            padding:2em;
+            text-align: center;
+            font-size: 2rem;
+        }
+        #Board5{border-radius:10px;
+            margin:2.5px 2.5px 2.5px 5px;
+            background-color: rgba(8, 188, 254, 0.497);
+            color:white;
+            grid-row:3;
+            grid-column:2;
+            padding:2em;
+            text-align: center;
+            font-size: 2rem;
+        }
+        #Board6{border-radius:10px;
+            margin:2.5px 2.5px 2.5px 2.5px;
+            background-color: rgba(242, 255, 4, 0.463);
+            color:white;
+            padding:2em;
+            grid-row:3;
+            grid-column:3;
+            text-align: center;
+            font-size: 2rem;
+        }#Board7{border-radius:10px;
+            margin:2.5px 2.5px 2.5px 5px;
+            background-color: rgba(255, 0, 251, 0.404);
+            grid-row:4;
+            grid-column:2/5;
+            font-size: xx-large;
+            color:red;
+            text-align:center;
+            align-content:center;
+            padding:2em;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+    <link rel="stylesheet" href="styledemo.css">
+    
+</head>
+<body >
+    <header id="navbar">
+    <div class="navbar-left">
+      <img src="pic/Vemu_logo1.png" alt="Vemu IT" height="80">
+    </div>
+
+    <div class="navbar-center">
+      <img src="pic/Vemu_logo2.png" alt="Naac_Certification" height="80">
+      <img src="pic/Vemu_logo3.png" alt="Blood Donator" height="80">
+      <img src="pic/Vemu_logo4.png" alt="Ai_Enhancement" height="80">
+      <img src="pic/Vemu_logo5.png" alt="Eamcet_Mock_Test" height="80">
+    </div>
+    <div class="menu-button">
+        <h>Menu</h>
+        <span style="background-color: blue;" class="span1"><span id="line"></span>
+        <span id="line"></span>
+        <span id="line"></span></span>
+    </div>
+  </header>
+  
+    <aside>
+        <h5><a href="Dash.html" style="text-decoration:none;color:white">Home 📚</a></h5>
+        <div><h5>Account Details:</h5><p style="background-color: rgba(9, 9, 255, 0.342);z-index: 50; margin-top:5px;">XXXXXXXXXXX@vemuit.org</p>
+        <select style="margin-top: 10px;border:none;border-radius:5px;font-size: 20px; padding:5px;width:100%;background-color:rgba(72, 4, 246, 0.449);color:white;">
+            <option>Member</option>
+            <option>Admin</option>
+            <option>faculty</option>
+            <option>Librarian</option>
+        </select>
+        <h5><a href="index.html" style="text-decoration:none;color:white">Logout 🚪</a></h5>
+    </aside>
+</body>
+</html>
